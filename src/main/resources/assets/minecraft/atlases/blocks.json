@@ -1,0 +1,80 @@
+{
+  "sources": [
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/water_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/dragon_breath_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/honey_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/night_vision_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/invisibility_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/leaping_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/fire_resistance_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/swiftness_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/slowness_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/turtle_master_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/water_breathing_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/healing_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/harming_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/poison_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/regeneration_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/strength_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/weakness_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/luck_filled"
+    },
+    {
+      "type": "single",
+      "resource": "decorativebottles:layer/slow_falling_filled"
+    }
+  ]
+}

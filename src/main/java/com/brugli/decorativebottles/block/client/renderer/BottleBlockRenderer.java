@@ -5,7 +5,7 @@ import com.brugli.decorativebottles.block.custom.BottleBlock;
 import com.brugli.decorativebottles.block.entity.custom.BottleBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -14,6 +14,7 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
+import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
@@ -22,7 +23,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.client.ForgeHooksClient;
 
 public class BottleBlockRenderer implements BlockEntityRenderer<BottleBlockEntity> {
 
@@ -46,25 +46,25 @@ public class BottleBlockRenderer implements BlockEntityRenderer<BottleBlockEntit
     public static final ResourceLocation LUCK_FILLER = new ResourceLocation(DecorativeBottles.MODID, "layer/luck_filled");
     public static final ResourceLocation SLOW_FALLING_FILLER = new ResourceLocation(DecorativeBottles.MODID, "layer/slow_falling_filled");
 
-    public static final Material WATER_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(WATER_FILLER);
-    public static final Material DRAGON_BREATH_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(DRAGON_BREATH_FILLER);
-    public static final Material HONEY_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(HONEY_FILLER);
-    public static final Material NIGHT_VISION_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(NIGHT_VISION_FILLER);
-    public static final Material INVISIBILITY_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(INVISIBILITY_FILLER);
-    public static final Material LEAPING_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(LEAPING_FILLER);
-    public static final Material FIRE_RESISTANCE_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(FIRE_RESISTANCE_FILLER);
-    public static final Material SWIFTNESS_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(SWIFTNESS_FILLER);
-    public static final Material SLOWNESS_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(SLOWNESS_FILLER);
-    public static final Material TURTLE_MASTER_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(TURTLE_MASTER_FILLER);
-    public static final Material WATER_BREATHING_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(WATER_BREATHING_FILLER);
-    public static final Material HEALING_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(HEALING_FILLER);
-    public static final Material HARMING_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(HARMING_FILLER);
-    public static final Material POISON_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(POISON_FILLER);
-    public static final Material REGENERATION_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(REGENERATION_FILLER);
-    public static final Material STRENGTH_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(STRENGTH_FILLER);
-    public static final Material WEAKNESS_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(WEAKNESS_FILLER);
-    public static final Material LUCK_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(LUCK_FILLER);
-    public static final Material SLOW_FALLING_FILLER_LOCATION = ForgeHooksClient.getBlockMaterial(SLOW_FALLING_FILLER);
+    public static final Material WATER_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, WATER_FILLER);
+    public static final Material DRAGON_BREATH_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, DRAGON_BREATH_FILLER);
+    public static final Material HONEY_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, HONEY_FILLER);
+    public static final Material NIGHT_VISION_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, NIGHT_VISION_FILLER);
+    public static final Material INVISIBILITY_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, INVISIBILITY_FILLER);
+    public static final Material LEAPING_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, LEAPING_FILLER);
+    public static final Material FIRE_RESISTANCE_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, FIRE_RESISTANCE_FILLER);
+    public static final Material SWIFTNESS_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, SWIFTNESS_FILLER);
+    public static final Material SLOWNESS_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, SLOWNESS_FILLER);
+    public static final Material TURTLE_MASTER_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, TURTLE_MASTER_FILLER);
+    public static final Material WATER_BREATHING_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, WATER_BREATHING_FILLER);
+    public static final Material HEALING_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, HEALING_FILLER);
+    public static final Material HARMING_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, HARMING_FILLER);
+    public static final Material POISON_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, POISON_FILLER);
+    public static final Material REGENERATION_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, REGENERATION_FILLER);
+    public static final Material STRENGTH_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, STRENGTH_FILLER);
+    public static final Material WEAKNESS_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, WEAKNESS_FILLER);
+    public static final Material LUCK_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, LUCK_FILLER);
+    public static final Material SLOW_FALLING_FILLER_LOCATION = new Material(TextureAtlas.LOCATION_BLOCKS, SLOW_FALLING_FILLER);
 
     public static final ModelLayerLocation BOTTLE_FILLER_LAYER = new ModelLayerLocation(WATER_FILLER, "main");
 
@@ -1097,8 +1097,8 @@ public class BottleBlockRenderer implements BlockEntityRenderer<BottleBlockEntit
         p_173542_.pushPose();
         p_173542_.translate(0.5D, 1.5D, 0.5D);
         float f = blockstate.getValue(BottleBlock.FACING).getCounterClockWise().toYRot() - 90F;
-        p_173542_.mulPose(Vector3f.YP.rotationDegrees(-f));
-        p_173542_.mulPose(Vector3f.ZP.rotationDegrees(180F));
+        p_173542_.mulPose(Axis.YP.rotationDegrees(-f));
+        p_173542_.mulPose(Axis.ZP.rotationDegrees(180F));
         VertexConsumer vertexconsumer = p_173546_.buffer(p_173543_, RenderType::entitySolid);
         p_173544_.render(p_173542_, vertexconsumer, p_173547_, p_173548_);
         p_173542_.popPose();
@@ -1110,8 +1110,8 @@ public class BottleBlockRenderer implements BlockEntityRenderer<BottleBlockEntit
         p_173542_.pushPose();
         p_173542_.translate(0.5D, 1.5D, 0.5D);
         float f = blockstate.getValue(BottleBlock.FACING).getCounterClockWise().toYRot() - 90F;
-        p_173542_.mulPose(Vector3f.YP.rotationDegrees(-f));
-        p_173542_.mulPose(Vector3f.ZP.rotationDegrees(180F));
+        p_173542_.mulPose(Axis.YP.rotationDegrees(-f));
+        p_173542_.mulPose(Axis.ZP.rotationDegrees(180F));
         VertexConsumer vertexconsumer = p_173546_.buffer(p_173543_, RenderType::dragonExplosionAlpha);
         p_173544_.render(p_173542_, vertexconsumer, p_173547_, p_173548_);
         p_173542_.popPose();
