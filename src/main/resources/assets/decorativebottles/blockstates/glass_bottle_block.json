@@ -1,0 +1,80 @@
+{
+  "variants": {
+    "bottles=1,facing=north":
+    {
+      "model": "decorativebottles:block/glass_bottle_block"
+    },
+    "bottles=1,facing=east":
+    {
+      "model": "decorativebottles:block/glass_bottle_block",
+      "y": 90
+    },
+    "bottles=1,facing=south":
+    {
+      "model": "decorativebottles:block/glass_bottle_block",
+      "y": 180
+    },
+    "bottles=1,facing=west":
+    {
+      "model": "decorativebottles:block/glass_bottle_block",
+      "y": 270
+    },
+    "bottles=2,facing=north":
+    {
+      "model": "decorativebottles:block/two_glass_bottle_block"
+    },
+    "bottles=2,facing=east":
+    {
+      "model": "decorativebottles:block/two_glass_bottle_block",
+      "y": 90
+    },
+    "bottles=2,facing=south":
+    {
+      "model": "decorativebottles:block/two_glass_bottle_block",
+      "y": 180
+    },
+    "bottles=2,facing=west":
+    {
+      "model": "decorativebottles:block/two_glass_bottle_block",
+      "y": 270
+    },
+    "bottles=3,facing=north":
+    {
+      "model": "decorativebottles:block/three_glass_bottle_block"
+    },
+    "bottles=3,facing=east":
+    {
+      "model": "decorativebottles:block/three_glass_bottle_block",
+      "y": 90
+    },
+    "bottles=3,facing=south":
+    {
+      "model": "decorativebottles:block/three_glass_bottle_block",
+      "y": 180
+    },
+    "bottles=3,facing=west":
+    {
+      "model": "decorativebottles:block/three_glass_bottle_block",
+      "y": 270
+    },
+    "bottles=4,facing=north":
+    {
+      "model": "decorativebottles:block/four_glass_bottle_block"
+    },
+    "bottles=4,facing=east":
+    {
+      "model": "decorativebottles:block/four_glass_bottle_block",
+      "y": 90
+    },
+    "bottles=4,facing=south":
+    {
+      "model": "decorativebottles:block/four_glass_bottle_block",
+      "y": 180
+    },
+    "bottles=4,facing=west":
+    {
+      "model": "decorativebottles:block/four_glass_bottle_block",
+      "y": 270
+    }
+  }
+}
