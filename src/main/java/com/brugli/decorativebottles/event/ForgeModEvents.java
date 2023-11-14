@@ -47,22 +47,22 @@ public class ForgeModEvents {
                 BlockState relativeState = event.getLevel().getBlockState(relativePos);
                 BlockPlaceContext blockPlaceContext = new BlockPlaceContext(event.getEntity(), event.getHand(), event.getItemStack(), blockHitResult);
 
-                if (relativeState.getBlock() instanceof BottleBlock && relativeState.getValue(BottleBlock.BOTTLES) < 4) {
-                    event.getLevel().setBlockAndUpdate(relativePos, Objects.requireNonNull(Objects.requireNonNull(DecorativeBottlesBlocks.GLASS_BOTTLE_BLOCK.get().getStateForPlacement(blockPlaceContext)).setValue(BottleBlock.BOTTLES, relativeState.getValue(BottleBlock.BOTTLES) + 1).setValue(BottleBlock.FACING, relativeState.getValue(BottleBlock.FACING))));
+                if (blockState.getBlock() instanceof BottleBlock && blockState.getValue(BottleBlock.BOTTLES) < 4) {
+                    event.getLevel().setBlockAndUpdate(pos, Objects.requireNonNull(Objects.requireNonNull(DecorativeBottlesBlocks.GLASS_BOTTLE_BLOCK.get().getStateForPlacement(blockPlaceContext)).setValue(BottleBlock.BOTTLES, blockState.getValue(BottleBlock.BOTTLES) + 1).setValue(BottleBlock.FACING, blockState.getValue(BottleBlock.FACING))));
                     player.swing(player.getUsedItemHand(), true);
-                    level.playSound((Player) null, relativePos, SoundEvents.GLASS_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                    BlockEntity blockentity = level.getBlockEntity(relativePos);
+                    level.playSound((Player) null, pos, SoundEvents.GLASS_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    BlockEntity blockentity = level.getBlockEntity(pos);
                     if (blockentity instanceof BottleBlockEntity bottleBlockEntity) {
                         bottleBlockEntity.placeBottle(player, player.getAbilities().instabuild ? itemStack.copy() : itemStack);
                     }
                     return InteractionResult.SUCCESS;
                 }
 
-                if (blockState.getBlock() instanceof BottleBlock && blockState.getValue(BottleBlock.BOTTLES) < 4) {
-                    event.getLevel().setBlockAndUpdate(pos, Objects.requireNonNull(Objects.requireNonNull(DecorativeBottlesBlocks.GLASS_BOTTLE_BLOCK.get().getStateForPlacement(blockPlaceContext)).setValue(BottleBlock.BOTTLES, blockState.getValue(BottleBlock.BOTTLES) + 1).setValue(BottleBlock.FACING, blockState.getValue(BottleBlock.FACING))));
+                if (relativeState.getBlock() instanceof BottleBlock && relativeState.getValue(BottleBlock.BOTTLES) < 4) {
+                    event.getLevel().setBlockAndUpdate(relativePos, Objects.requireNonNull(Objects.requireNonNull(DecorativeBottlesBlocks.GLASS_BOTTLE_BLOCK.get().getStateForPlacement(blockPlaceContext)).setValue(BottleBlock.BOTTLES, relativeState.getValue(BottleBlock.BOTTLES) + 1).setValue(BottleBlock.FACING, relativeState.getValue(BottleBlock.FACING))));
                     player.swing(player.getUsedItemHand(), true);
-                    level.playSound((Player) null, pos, SoundEvents.GLASS_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
-                    BlockEntity blockentity = level.getBlockEntity(pos);
+                    level.playSound((Player) null, relativePos, SoundEvents.GLASS_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    BlockEntity blockentity = level.getBlockEntity(relativePos);
                     if (blockentity instanceof BottleBlockEntity bottleBlockEntity) {
                         bottleBlockEntity.placeBottle(player, player.getAbilities().instabuild ? itemStack.copy() : itemStack);
                     }
